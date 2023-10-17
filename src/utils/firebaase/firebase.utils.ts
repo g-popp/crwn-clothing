@@ -15,10 +15,6 @@ const firebaseConfig = {
     appId: import.meta.env.VITE_APP_ID
 };
 
-export const logConfig = () => {
-    console.log(firebaseConfig);
-};
-
 const firebaseApp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
