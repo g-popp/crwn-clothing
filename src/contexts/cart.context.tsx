@@ -16,25 +16,22 @@ const addCartItems = (cartItems, productToAdd) => {
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
-const removeItemFromCart = (cartItems, productToRemove) => {
-  return cartItems.filter((item) => item.id !== productToRemove.id);
-};
+const removeItemFromCart = (cartItems, productToRemove) =>
+  cartItems.filter((item) => item.id !== productToRemove.id);
 
-const increaseItemQuantity = (cartItems, product) => {
-  return cartItems.map((cartItem) =>
+const increaseItemQuantity = (cartItems, product) =>
+  cartItems.map((cartItem) =>
     cartItem.id === product.id
       ? { ...cartItem, quantity: cartItem.quantity + 1 }
       : cartItem
   );
-};
 
-const decreaseItemQuantity = (cartItems, product) => {
-  return cartItems.map((cartItem) =>
+const decreaseItemQuantity = (cartItems, product) =>
+  cartItems.map((cartItem) =>
     cartItem.id === product.id && product.quantity > 1
       ? { ...cartItem, quantity: cartItem.quantity - 1 }
       : cartItem
   );
-};
 
 export const CartContext = createContext({
   isCartOpen: false,
