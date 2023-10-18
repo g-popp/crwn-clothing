@@ -19,7 +19,7 @@ const firebaseConfig = {
     appId: import.meta.env.VITE_APP_ID
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({
