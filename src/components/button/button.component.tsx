@@ -1,13 +1,21 @@
 import './button.styles.scss';
 
 const BUTTON_STYLES = {
-    google: 'button-google',
-    inverted: 'button-inverted'
+    google: 'google-sign-in',
+    inverted: 'inverted'
 };
 
-const Button = ({ children, buttonType, ...props }) => (
+interface buttonProps {
+    children: string;
+    buttonType?: keyof typeof BUTTON_STYLES;
+    [key: string]: any;
+}
+
+const Button = ({ children, buttonType, ...props }: buttonProps) => (
     <button
-        className={`button-container ${BUTTON_STYLES[buttonType]}`}
+        className={`button-container ${
+            buttonType && BUTTON_STYLES[buttonType]
+        }`}
         {...props}
     >
         {children}
