@@ -1,6 +1,17 @@
-.products-container {
+.preview-container {
+  margin-bottom: 30px;
+
+  .products-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
-    row-gap: 50px;
+    row-gap: 15px;
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 28px;
+      margin-bottom: 25px;
+      cursor: pointer;
+    }
+  }
 }
