@@ -4,6 +4,7 @@ import ProductCard from '../product-card/product-card.component';
 import {
   CategoryPreviewContainer,
   CategoryPreviewView,
+  Title,
 } from './category-preview.styles';
 
 const CategoryPreview = ({ title, products }) => {
@@ -16,7 +17,7 @@ const CategoryPreview = ({ title, products }) => {
   return (
     <CategoryPreviewContainer>
       <h2>
-        <span onClick={navigateToCategory}>{title.toUpperCase()}</span>
+        <Title onClick={navigateToCategory}>{title.toUpperCase()}</Title>
       </h2>
       <CategoryPreviewView>
         {products
