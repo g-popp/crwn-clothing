@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   HomeBackgroundImage,
   HomeBody,
@@ -5,9 +6,13 @@ import {
 } from './home-item.styles';
 
 const HomeItem = (category) => {
-  const { imageUrl, title } = category.category;
+  const { imageUrl, title, route } = category.category;
+  const navigate = useNavigate();
+
+  const navigateToRoute = () => navigate(route);
+
   return (
-    <HomeContainer>
+    <HomeContainer onClick={navigateToRoute}>
       <HomeBackgroundImage imageUrl={imageUrl} />
       <HomeBody>
         <h2>{title}</h2>
