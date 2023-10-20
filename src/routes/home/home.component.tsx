@@ -1,7 +1,7 @@
-import CategoriesContainer from '../../components/categories-container/categories-container.component';
+import CategoriesContainerStyled from '../../components/categories-container/categories-container.component';
 
 const Home = () => {
-    return <CategoriesContainer />;
+  return <CategoriesContainerStyled />;
 };
 
 export default Home;

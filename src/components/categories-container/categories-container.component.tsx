@@ -1,6 +1,5 @@
 import HomeItem from '../home-item/home-item.component';
-
-import './categories-container.styles.scss';
+import { CategoriesContainerStyled } from './categories-container.styles';
 
 const CategoriesContainer = () => {
   const categories = [
@@ -32,11 +31,11 @@ const CategoriesContainer = () => {
   ];
 
   return (
-    <div className="categories-container">
+    <CategoriesContainerStyled>
       {categories.map((category) => (
         <HomeItem key={category.id} category={category} />
       ))}
-    </div>
+    </CategoriesContainerStyled>
   );
 };
 
