@@ -1,18 +1,24 @@
-import './home-item.styles.scss';
+import { useNavigate } from 'react-router-dom';
+import {
+  HomeBackgroundImage,
+  HomeBody,
+  HomeContainer,
+} from './home-item.styles';
 
 const HomeItem = (category) => {
-  const { imageUrl, title } = category.category;
+  const { imageUrl, title, route } = category.category;
+  const navigate = useNavigate();
+
+  const navigateToRoute = () => navigate(route);
+
   return (
-    <div className="home-container">
-      <div
-        className="background-image"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      />
-      <div className="home-body">
+    <HomeContainer onClick={navigateToRoute}>
+      <HomeBackgroundImage imageUrl={imageUrl} />
+      <HomeBody>
         <h2>{title}</h2>
         <p>Shop Now</p>
-      </div>
-    </div>
+      </HomeBody>
+    </HomeContainer>
   );
 };
 
