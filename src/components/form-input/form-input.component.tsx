@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { FormInputLabel, Group, Input } from './form-input.styles';
 
 const FormInput = ({ label, ...inputOptions }) => {

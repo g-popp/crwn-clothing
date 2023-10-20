@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { CartItemContainer, CartItemDetails } from './cart-item.styles';
 
 const CartItem = ({ cartItem }) => {

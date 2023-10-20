@@ -1,8 +1,9 @@
+// @ts-nocheck
 import { useState } from 'react';
 import {
   signInUserWithEmailAndPassword,
   signInWithGooglePopup,
-} from '../../utils/firebaase/firebase.utils';
+} from '../../utils/firebase/firebase.utils';
 import Button, { BUTTON_STYLES } from '../button/button.component';
 import FormInput from '../form-input/form-input.component';
 
@@ -34,7 +35,7 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const { user } = await signInUserWithEmailAndPassword(email, password);
+      await signInUserWithEmailAndPassword(email, password);
       resetFormFields();
     } catch (error) {
       if (error.code === 'auth/invalid-login-credentials') {

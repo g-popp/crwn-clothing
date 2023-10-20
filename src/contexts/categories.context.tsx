@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { createContext, useEffect, useState } from 'react';
-import { getCategoriesAndDocuments } from '../utils/firebaase/firebase.utils';
+import { getCategoriesAndDocuments } from '../utils/firebase/firebase.utils';
 
 export const CategoriesContext = createContext({
   categoriesMap: {},
