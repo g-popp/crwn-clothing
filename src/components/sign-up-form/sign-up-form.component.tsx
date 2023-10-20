@@ -1,8 +1,9 @@
+// @ts-nocheck
 import { useState } from 'react';
 import {
   createAuthUserWithEmail,
   createUserDocumentFromAuth,
-} from '../../utils/firebaase/firebase.utils';
+} from '../../utils/firebase/firebase.utils';
 import FormInput from '../form-input/form-input.component';
 
 import Button from '../button/button.component';

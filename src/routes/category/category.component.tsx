@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useParams } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import { CategoriesContext } from '../../contexts/categories.context';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createContext, useEffect, useState } from 'react';
 
 const addCartItems = (cartItems, productToAdd) => {

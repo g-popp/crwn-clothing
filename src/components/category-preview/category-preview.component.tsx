@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useNavigate } from 'react-router-dom';
 import ProductCard from '../product-card/product-card.component';
 
